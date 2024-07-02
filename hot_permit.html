@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <style>
+ body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #3b5998;
+      color: white;
+    }
+
+    h1 {
+      color: #fff;
+      text-align: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: auto;
+      color: #333;
+    }
+
+    p {
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px; /* Adjusted margin */
+    }
+
+    label {
+      margin-right: 10px;
+      vertical-align: middle; /* Align checkboxes and labels vertically */
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+      vertical-align: middle; /* Align checkboxes and labels vertically */
+    }
+
+    table {
+      width: 100%;
+      border-spacing: 10px;
+    }
+
+    td {
+      vertical-align: top;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px 0;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .page{
+        display: none;
+    }
+    .page.active{
+      display: block;
+    }
+
+    /* Flexbox styles */
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10x;
+    }
+
+    .flex-container .left-content {
+      flex: 1; /* Takes up remaining space */
+    }
+
+    .flex-container .right-content {
+      flex-shrink: 0; /* Don't shrink */
+    }
+
+</style>
+</head>
+ <body> 
+  <h1>Issue Hot Permit</h1>
+  <form >
+    <div id="page1" class="page active">
+    <div class="flex-container">
+      <div class="left-content">
+        <p>Checking of</p>
+        <input type="checkbox" id="Cold_permit_checked1" name="Cold_permit1" value="checked">
+        <label for="Cold_permit_checked1">Equipment</label>
+        <input type="checkbox" id="Cold_permit_covered1" name="Cold_permit1" value="covered">
+        <label for="Cold_permit_covered1">Work Area</label>
+      </div>
+      <div class="right-content">
+        <input type="radio" id="html_done1" name="Cold_permit1" value="HTML">
+        <label for="html_done1">Done</label>
+        <input type="radio" id="css_not_required1" name="Cold_permit1" value="CSS">
+        <label for="css_not_required1">Not Required</label>
+      </div>
+    </div>
+<br>
+  
+    <div class="flex-container">
+      <div class="left-content">
+        <p>Surrounding Area</p>
+        <input type="checkbox" id="Cold_permit_checked2" name="Cold_permit2" value="checked">
+        <label for="Cold_permit_checked2">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered2" name="Cold_permit2" value="covered">
+        <label for="Cold_permit_covered2">Rags</label>
+        <input type="checkbox" id="Cold_permit_cleaned2" name="Cold_permit2" value="cleaned">
+        <label for="Cold_permit_cleaned2">Cleaned Up of Oil</label>
+        <input type="checkbox" id="Cold_permit_cleaned3" name="Cold_permit2" value="cleaned">
+        <label for="Cold_permit_cleaned3">Grass etc Remove</label>
+      </div>
+      <div class="right-content">
+        <input type="radio" id="html_done2" name="Cold_permit2" value="HTML">
+        <label for="html_done2">Done</label>
+        <input type="radio" id="css_not_required2" name="Cold_permit2" value="CSS">
+        <label for="css_not_required2">Not Required</label>
+      </div>
+    </div>
+<br>
+
+
+    <div class="flex-container">
+        <div class="left-content">
+          <p>Sewers, Manholes, CBD etc and HOT Surface Nearby Covered</p>
+            <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+            <label for="Cold_permit_checked">Checked</label>
+            <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+            <label for="Cold_permit_covered">Covered</label>
+            <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+            <label for="Cold_permit_cleaned">Cleaned Up</label>
+            <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+            <label for="Cold_permit_removed">Removed Debris</label>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+            <label for="html_done">Done</label>
+            <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+            <label for="css_not_required">Not Required</label>
+        </div>
+    </div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>Consider Hazard From</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Other Routine</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Non Routine Operations & Concerned Person Alerted</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>Equipment Electrically Isolated and tagged vide</p>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit" value="HTML">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit" value="CSS">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+    
+<div class="flex-container">
+    <div class="left-content">
+        <p>Fire water hose/Portable Extinguishers Provided</p>
+        <input type="checkbox" id="Cold_permit_checked_CO2" name="Cold_permit_CO2" value="checked">
+        <label for="Cold_permit_checked_CO2">CO2</label>
+        <input type="checkbox" id="Cold_permit_covered_DCP" name="Cold_permit_DCP" value="covered">
+        <label for="Cold_permit_covered_DCP">DCP</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+    
+<div class="flex-container">
+    <div class="left-content">
+        <p>Equipment Properly Drained/Depressurised</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+      <p>Checked for Oil/Gas Trapped Behind Lining in Equipment</p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+  <br>
+    
+ <div class="flex-container">
+    <div class="left-content">
+        <p>Welding Machine Checked for</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit_earthing" value="checked">
+        <label for="Cold_permit_checked">Earthing</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit_welded" value="covered">
+        <label for="Cold_permit_covered">Being Welded</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit_return" value="cleaned">
+        <label for="Cold_permit_cleaned">Return Connection to Equipment</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+        <p>Equipment Properly Steamed/Purged</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+  <button type="button" onclick="showPage('page2')">Next</button>
+</div> 
+
+<div id="page2" class="page">
+  <div class="flex-container">
+    <div class="left-content">
+        <p>Shelid Against Sparks Provided</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>Proper Means of Exit Provided</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+ <div class="flex-container">
+    <div class="left-content">
+        <p>Iron Sulphide Removed/kept wet</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>Gas Test</p>
+        <input type="checkbox" id="Gas_HC" name="Gas_test" value="HC">
+        <label for="Gas_HC">HC</label>
+        <input type="checkbox" id="Gas_CO" name="Gas_test" value="CO">
+        <label for="Gas_CO">CO</label>
+        <input type="checkbox" id="Gas_O2" name="Gas_test" value="O2">
+        <label for="Gas_O2">O2</label>
+        <input type="checkbox" id="Gas_SO2" name="Gas_test" value="SO2">
+        <label for="Gas_SO2">SO2</label>
+        <input type="checkbox" id="Gas_H2S" name="Gas_test" value="H2S">
+        <label for="Gas_H2S">H2S</label>
+        <input type="checkbox" id="Gas_Other" name="Gas_test" value="Other">
+        <label for="Gas_Other">Other if Any</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="Gas_done" name="Gas_test_status" value="done">
+        <label for="Gas_done">Done</label>
+        <input type="radio" id="Gas_not_required" name="Gas_test_status" value="not_required">
+        <label for="Gas_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+      <p>Clearence Obtained for dyke wall cutting</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+  <div class="flex-container">
+    <div class="left-content">
+        <p>Proper tags/boards provided</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>Equipment Water Flushed</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>StandBy Personnel Provided to Fire Watch from</p>
+        
+        <input type="checkbox" id="StandBy_checked_process" name="StandBy_permit_process" value="checked">
+        <label for="StandBy_checked_process">Process</label>
+        
+        <input type="checkbox" id="StandBy_covered_maintenance" name="StandBy_permit_maintenance" value="covered">
+        <label for="StandBy_covered_maintenance">Maintenance</label>
+        
+        <input type="checkbox" id="StandBy_covered_contractor" name="StandBy_permit_contractor" value="covered">
+        <label for="StandBy_covered_contractor">Contractor</label>
+        
+        <input type="checkbox" id="StandBy_covered_fire_safety" name="StandBy_permit_fire_safety" value="covered">
+        <label for="StandBy_covered_fire_safety">Fire & Safety</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+    
+  <div class="flex-container">
+    <div class="left-content">
+        <p>Portable Equipment/nozzels properly Grounded</p>
+        <input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done" name="Cold_permit_status" value="done">
+        <label for="html_done">Done</label>
+        <input type="radio" id="css_not_required" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+        <p>Standby Personal Provided for Vessel Entry</p>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_vessel_entry_done" name="Vessel_entry_status" value="done">
+        <label for="html_vessel_entry_done">Done</label>
+        <input type="radio" id="css_vessel_entry_not_required" name="Vessel_entry_status" value="not_required">
+        <label for="css_vessel_entry_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+    <button type="button" onclick="showPage('page1')">Previous</button>
+    <button type="button" onclick="showPage('page3')">Next</button>
+  </div>
+ 
+<div id="page3" class="page">
+<div class="flex-container">
+    <div class="left-content">
+        <p>Clearence Obtained For Road Cutting from Tech/Fire/Concerned Department</p>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_road_cutting_done" name="Road_cutting_status" value="done">
+        <label for="html_road_cutting_done">Done</label>
+        <input type="radio" id="css_road_cutting_not_required" name="Road_cutting_status" value="not_required">
+        <label for="css_road_cutting_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+  
+<div class="flex-container">
+    <div class="left-content">
+        <p>Incase Of Excavation, Clearence Shall be Obtained from Area Civil & Excavation</p>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_excavation_done" name="Excavation_status" value="done">
+        <label for="html_excavation_done">Done</label>
+        <input type="radio" id="css_excavation_not_required" name="Excavation_status" value="not_required">
+        <label for="css_excavation_not_required">Not Required</label>
+    </div>
+</div>
+<br>
+    
+  <div class="flex-container">
+    <div class="left-content">
+        <p>Equipment</p>
+        <input type="checkbox" id="Cold_permit_checked_equipment" name="Cold_permit" value="checked">
+        <label for="Cold_permit_checked_equipment">Checked</label>
+        <input type="checkbox" id="Cold_permit_covered_equipment" name="Cold_permit" value="covered">
+        <label for="Cold_permit_covered_equipment">Covered</label>
+        <input type="checkbox" id="Cold_permit_cleaned_equipment" name="Cold_permit" value="cleaned">
+        <label for="Cold_permit_cleaned_equipment">Cleaned Up</label>
+        <input type="checkbox" id="Cold_permit_removed_equipment" name="Cold_permit" value="removed">
+        <label for="Cold_permit_removed_equipment">Removed Debris</label>
+    </div>
+    <div class="right-content">
+        <input type="radio" id="html_done_equipment" name="Cold_permit_status" value="done">
+        <label for="html_done_equipment">Done</label>
+        <input type="radio" id="css_not_required_equipment" name="Cold_permit_status" value="not_required">
+        <label for="css_not_required_equipment">Not Required</label>
+    </div>
+</div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+      <p>Precaution Against Public Traffic Taken</p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+<br>
+ 
+<div class="flex-container">
+    <div class="left-content">
+      <p>Proper Ventilation and Lighting Provided(24 Volts)</p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+      <p>Precautionary tags/boards Provided<p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+      <p>Area Cordoned Off<p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+<br>
+
+<div class="flex-container">
+    <div class="left-content">
+      <p>Clearence for Excavation from Electrical/Concerned Department<p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+<br>
+ 
+<div class="flex-container">
+    <div class="left-content">
+      <p>Cheacked Flame/Spark Arrestor in Mobile Equipment<p>
+  </div>
+        <input type="radio" id="html" name="Cold_permit" value="HTML">
+        <label for="html">Done</label>
+        <input type="radio" id="css" name="Cold_permit" value="CSS">
+        <label for="css">Not Required</label>
+  </div>
+<br>
+
+<p>Following Personal Protective Equipment's(PPE) are used</p>
+
+<table style="border: none;">
+  <tr>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Safety Helmet</label></td>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Safety Shoes</label></td>
+    <td><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Gloves</label></td>
+  </tr>
+  <tr>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Goggles</label></td>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Fresh Air Mask</label></td>
+    <td><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Canister Mask</label></td>
+  </tr>
+  <tr>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Lifeline</label></td>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Apron</label></td>
+    <td><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Dust Respiration</label></td>
+  </tr>
+  <tr>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Dosimeter</label></td>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Boiler Suit</label></td>
+    <td><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Flim Badges</label></td>
+  </tr>
+  <tr>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Ear plug</label></td>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Airline</label></td>
+    <td><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Breathing Apparatus</label></td>
+  </tr>
+  <tr>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Safety Belt</label></td>
+    <td style="padding-right: 10px;"><input type="checkbox" id="Cold_permit_covered" name="Cold_permit" value="covered">
+    <label for="Cold_permit_covered">Welding Suit</label></td>
+    <td><input type="checkbox" id="Cold_permit_checked" name="Cold_permit" value="checked">
+    <label for="Cold_permit_checked">Face Shield</label></td>
+  </tr>
+  
+</table>
+
+<br><br>
+
+<button type="button" onclick="showPage('page2')">Previous</button>
+<button type="submit">Submit</button>
+</div>
+</form>
+
+<script>
+  function showPage(pageId){
+    var pages = document.querySelectorAll('.page');
+    pages.forEach(function(page)
+    {
+      page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>

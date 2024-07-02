@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #3b5998;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group p {
+            padding: 8px;
+            background-color: #e9ebee;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            color: #333;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buttons .edit-btn {
+            background-color: #ffc107;
+            color: white;
+        }
+        .buttons .confirm-btn {
+            background-color: #3b5998;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmation Page</h1>
+        <form id="confirmationForm">
+            <div class="form-group">
+                <label>Issue By Department</label>
+                <p id="issueByDept"></p>
+            </div>
+            <div class="form-group">
+                <label>Issue By Area</label>
+                <p id="issueByArea"></p>
+            </div>
+            <div class="form-group">
+                <label>Issue to Department</label>
+                <p id="issueToDept"></p>
+            </div>
+            <div class="form-group">
+                <label>Issued to Area</label>
+                <p id="issueToArea"></p>
+            </div>
+            <div class="form-group">
+                <label>Permit Request Date</label>
+                <p id="permitRequestDate"></p>
+            </div>
+            <div class="form-group">
+                <label>Select Shift</label>
+                <p id="shift"></p>
+            </div>
+            <div class="form-group">
+                <label>Location of Work</label>
+                <p id="locationOfWork"></p>
+            </div>
+            <div class="form-group">
+                <label>Job Description</label>
+                <p id="jobDescription"></p>
+            </div>
+            <div class="form-group">
+                <label>Is gas test required?</label>
+                <p id="gas-test-required"></p>
+            </div>
+            <div class="form-group">
+                <label>Is permit to be received by individual?</label>
+                <p id="permit-received-by-individual"></p>
+            </div>
+            <div class="form-group">
+                <label>SAP Option</label>
+                <p id="sap"></p>
+            </div>
+            <div class="form-group">
+                <label>Reason for without SAP notification</label>
+                <p id="sapComments"></p>
+            </div>
+            <div class="form-group">
+                <label>Work Order Option</label>
+                <p id="workOrder"></p>
+            </div>
+            <div class="form-group">
+                <label>Reason for without Work Order Number</label>
+                <p id="workOrderComments"></p>
+            </div>
+            <div class="buttons">
+                <button type="button" class="edit-btn" onclick="editForm()">Edit</button>
+                <button type="button" class="confirm-btn" onclick="submitForm()">Confirm</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('issueByDept').textContent = urlParams.get('issueByDept');
+            document.getElementById('issueByArea').textContent = urlParams.get('issueByArea');
+            document.getElementById('issueToDept').textContent = urlParams.get('issueToDept');
+            document.getElementById('issueToArea').textContent = urlParams.get('issueToArea');
+            document.getElementById('permitRequestDate').textContent = urlParams.get('permitRequestDate');
+            document.getElementById('shift').textContent = urlParams.get('shift');
+            document.getElementById('locationOfWork').textContent = urlParams.get('locationOfWork');
+            document.getElementById('jobDescription').textContent = urlParams.get('jobDescription');
+            document.getElementById('gas-test-required').textContent = urlParams.get('gas-test-required') ? 'Yes' : 'No';
+            document.getElementById('permit-received-by-individual').textContent = urlParams.get('permit-received-by-individual') ? 'Yes' : 'No';
+            document.getElementById('sap').textContent = urlParams.get('sap');
+            document.getElementById('sapComments').textContent = urlParams.get('sapComments');
+            document.getElementById('workOrder').textContent = urlParams.get('workOrder');
+            document.getElementById('workOrderComments').textContent = urlParams.get('workOrderComments');
+        });
+
+        function editForm() {
+            window.history.back();
+        }
+
+        function submitForm() {
+            alert("Form submitted!");
+            // Add your submission logic here
+        }
+    </script>
+</body>
+</html>

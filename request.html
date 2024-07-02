@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="gpt.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="nrl-og-logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Fire and Safety <br> Department</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-notepad icon'></i>
+                            <span class="text nav-text">Issue Permit</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-key icon'></i>
+                            <span class="text nav-text">Loto keys</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-list-check icon'></i>
+                            <span class="text nav-text">Approval</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-checkbox-checked icon'></i>
+                            <span class="text nav-text">Clearance</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-left-arrow-square icon'></i>
+                            <span class="text nav-text">Receive</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-calendar-x icon'></i>
+                            <span class="text nav-text">Close Request</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-cog icon'></i>
+                            <span class="text nav-text">Close permit</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-content">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <div class="home">
+        <div class="top">
+            <div class="text">Hi User!</div>
+            <nav>
+                <div class="profile-photo">
+                    <img src="nrl-og-logo.png" alt="" onclick="toggleMenu()">
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="nrl-og-logo.png">
+                                <h2>User</h2>
+                            </div>
+                            <hr>
+                            <a href="#" class="sub-menu-link"><i class='bx bx-user' style="font-size: 20px; color: black;"></i>
+                                <p>Edit profile</p>
+                                <span>></span>
+                            </a>
+                            <a href="#" class="sub-menu-link"><i class='bx bxs-cog' style="font-size: 20px; color: black;"></i>
+                                <p>Settings</p>
+                                <span>></span>
+                            </a>
+                            <a href="#" class="sub-menu-link"><i class='bx bxs-help-circle' style="font-size: 20px; color: black;"></i>
+                                <p>Help and Support</p>
+                                <span>></span>
+                            </a>
+                            <a href="#" class="sub-menu-link"><i class='bx bx-log-out-circle' style="font-size: 20px; color: black;"></i>
+                                <p>Log out</p>
+                                <span>></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+
+        <div class="form-container">
+            <h2>E-Permit Request Form</h2>
+            <form id="formPage" action="Confirmation.html" method="get">
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Issued By Department:</label>
+                        <input type="text" id="issueByDept" name="issueByDept" placeholder="Department Name" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Issued By Area:</label>
+                        <select name="issueByArea" required>
+                            <option value="" disabled selected>Select Area</option>
+                            <option value="area1" style="color: black;">Area 1</option>
+                            <option value="area2" style="color: black;">Area 2</option>
+                            <option value="area3" style="color: black;">Area 3</option>
+                            <option value="area4" style="color: black;">Area 4</option>
+                            <option value="area5" style="color: black;">Area 5</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Issued To Department:</label>
+                        <select name="issueToDept" required>
+                            <option value="" disabled selected>Select Department</option>
+                            <option value="Department1" style="color: black;">Department 1</option>
+                            <option value="Department2" style="color: black;">Department 2</option>
+                            <option value="Department3" style="color: black;">Department 3</option>
+                            <option value="Department4" style="color: black;">Department 4</option>
+                            <option value="Department5" style="color: black;">Department 5</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Issued To Area:</label>
+                        <select name="issueToArea" required>
+                            <option value="" disabled selected>Select Area</option>
+                            <option value="area1" style="color: black;">Area 1</option>
+                            <option value="area2" style="color: black;">Area 2</option>
+                            <option value="area3" style="color: black;">Area 3</option>
+                            <option value="area4" style="color: black;">Area 4</option>
+                            <option value="area5" style="color: black;">Area 5</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Permit Request Date:</label>
+                        <input type="date" id="permitRequestDate" name="permitRequestDate" placeholder="enter birth date" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Select Shift:</label>
+                        <select id="shift" name="shift" required>
+                            <option value="" disabled selected>Select Shift</option>
+                            <option value="shift1" style="color: black;">6 AM - 2 PM</option>
+                            <option value="shift2" style="color: black;">2 PM - 10 PM</option>
+                            <option value="shift3" style="color: black;">10 PM - 6 AM</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Location of Work:</label>
+                        <input type="text" id="locationOfWork" name="locationOfWork" placeholder="Work Location" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Job Description:</label>
+                        <input type="text" id="jobDescription" name="jobDescription" placeholder="Job Description" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="gas-test-required" class="checkbox-label">Is Gas Test Required?</label>
+                        <input type="checkbox" id="gas-test-required" name="gas-test-required">
+                        <label for="permit-received-by-individual" class="checkbox-label">Is permit to be received by Individual?</label>
+                        <input type="checkbox" id="permit-received-by-individual" name="permit-received-by-individual">
+                    </div>
+                </div>
+                <div class="sap-container">
+                    <h2>SAP</h2>
+                    <div class="sap-fields">
+                        <div class="sap-input-field">
+                            <div class="sap-radio-group">
+                                <input type="radio" id="With_SAP_notification" name="sap" value="With SAP notification">
+                                <label for="With_SAP_notification">With SAP notification</label>
+                                <input type="radio" id="With_SAP_PMO_Notification" name="sap" value="With SAP PMO Notification">
+                                <label for="With_SAP_PMO_Notification">With SAP PMO Notification</label>
+                                <input type="radio" id="With_SAP_PM_sub_order" name="sap" value="With SAP PM sub order">
+                                <label for="With_SAP_PM_sub_order">With SAP PM sub order</label>
+                                <input type="radio" id="Without_SAP_notification" name="sap" value="Without SAP notification">
+                                <label for="Without_SAP_notification">Without SAP notification</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="sap-input-field">
+                            <label>Reason for without SAP notification:</label>
+                            <textarea id="sapComments" name="sapComments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-order-container">
+                    <h2>Work Order</h2>
+                    <div class="work-order-fields">
+                        <div class="work-order-input-field">
+                            <div class="work-order-radio-group">
+                                <input type="radio" id="WWON" name="workOrder" value="With Work Order Number">
+                                <label for="WWON">With Work Order Number</label>
+                                <input type="radio" id="WION" name="workOrder" value="Without Work Order Number">
+                                <label for="WION">Without Work Order Number</label>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="work-order-input-field">
+                            <label>Reason for without Work Order Number:</label>
+                            <textarea id="workOrderComments" name="workOrderComments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+<script>
+    const body = document.querySelector('body'),
+        sidebar = body.querySelector('nav'),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
+
+    toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+    });
+
+    searchBtn.addEventListener("click", () => {
+        sidebar.classList.remove("close");
+    });
+
+    modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+            modeText.innerText = "Light mode";
+        } else {
+            modeText.innerText = "Dark mode";
+        }
+    });
+
+    let subMenu = document.getElementById("subMenu");
+    function toggleMenu() {
+        subMenu.classList.toggle("");
+    }
+</script>
+</body>
+</html>

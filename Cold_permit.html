@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #3b5998;
+            color: white;
+        }
+
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+            color: #333;
+        }
+
+        p {
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 5px;
+            margin-top: 0;
+        }
+
+        label {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .flex-container .left-content {
+            flex: 1;
+        }
+
+        .flex-container .right-content {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Issue Cold Permit</h1>
+<form>
+    <div id="page1" class="page active">
+      <div class="flex-container">
+        <div class="left-content">
+            <p>Equipment Work Area Inspected</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done1" name="Cold_permit1" value="HTML">
+            <label for="html_done1">Done</label>
+            <input type="radio" id="css_not_required1" name="Cold_permit1" value="CSS">
+            <label for="css_not_required1">Not Required</label>
+        </div>
+     </div>
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Surrounding Area</p>
+            <input type="checkbox" id="Cold_permit_checked2" name="Cold_permit2" value="checked">
+            <label for="Cold_permit_checked2">Checked</label>
+            <input type="checkbox" id="Cold_permit_covered2" name="Cold_permit2" value="covered">
+            <label for="Cold_permit_covered2">Covered</label>
+            <input type="checkbox" id="Cold_permit_cleaned2" name="Cold_permit2" value="cleaned">
+            <label for="Cold_permit_cleaned2">Cleaned</label>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done2" name="Cold_permit2" value="HTML">
+            <label for="html_done2">Done</label>
+            <input type="radio" id="css_not_required2" name="Cold_permit2" value="CSS">
+            <label for="css_not_required2">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Equipment Electrically Isolated and Tagged Vide</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done3" name="Cold_permit3" value="HTML">
+            <label for="html_done3">Done</label>
+            <input type="radio" id="css_not_required3" name="Cold_permit3" value="CSS">
+            <label for="css_not_required3">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Running Water</p>
+            <input type="checkbox" id="Cold_permit_checked4" name="Cold_permit4" value="checked">
+            <label for="Cold_permit_checked4">Checked</label>
+            <input type="checkbox" id="Cold_permit_covered4" name="Cold_permit4" value="covered">
+            <label for="Cold_permit_covered4">Covered</label>
+            <input type="checkbox" id="Cold_permit_cleaned4" name="Cold_permit4" value="cleaned">
+            <label for="Cold_permit_cleaned4">Cleaned</label>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done4" name="Cold_permit4" value="HTML">
+            <label for="html_done4">Done</label>
+            <input type="radio" id="css_not_required4" name="Cold_permit4" value="CSS">
+            <label for="css_not_required4">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Equipment</p>
+            <input type="checkbox" id="Cold_permit_checked5" name="Cold_permit5" value="checked">
+            <label for="Cold_permit_checked5">Blinded</label>
+            <input type="checkbox" id="Cold_permit_covered5" name="Cold_permit5" value="covered">
+            <label for="Cold_permit_covered5">Closed</label>
+            <input type="checkbox" id="Cold_permit_cleaned5" name="Cold_permit5" value="cleaned">
+            <label for="Cold_permit_cleaned5">Disconnected</label>
+            <input type="checkbox" id="Cold_permit_isolated5" name="Cold_permit5" value="isolated">
+            <label for="Cold_permit_isolated5">Isolated</label>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done5" name="Cold_permit5" value="HTML">
+            <label for="html_done5">Done</label>
+            <input type="radio" id="css_not_required5" name="Cold_permit5" value="CSS">
+            <label for="css_not_required5">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Equipment Properly</p>
+            <input type="checkbox" id="Cold_permit_drained6" name="Cold_permit6" value="drained">
+            <label for="Cold_permit_drained6">Drained</label>
+            <input type="checkbox" id="Cold_permit_depressurised6" name="Cold_permit6" value="depressurised">
+            <label for="Cold_permit_depressurised6">Depressurised</label>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done6" name="Cold_permit6" value="HTML">
+            <label for="html_done6">Done</label>
+            <input type="radio" id="css_not_required6" name="Cold_permit6" value="CSS">
+            <label for="css_not_required6">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Equipment Water Flushed</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done7" name="Cold_permit7" value="HTML">
+            <label for="html_done7">Done</label>
+            <input type="radio" id="css_not_required7" name="Cold_permit7" value="CSS">
+            <label for="css_not_required7">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Iron Sulphide Removed/kept wet</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done8" name="Cold_permit8" value="HTML">
+            <label for="html_done8">Done</label>
+            <input type="radio" id="css_not_required8" name="Cold_permit8" value="CSS">
+            <label for="css_not_required8">Not Required</label>
+        </div>
+    </div>
+
+    <br>
+
+        <button type="button" onclick="showPage('page2')">Next</button>
+    </div>
+
+    <div id="page2" class="page">
+        <div class="flex-container">
+            <div class="left-content">
+                <p>Equipment Properly Steamed/Purged</p>
+            </div>
+            <div class="right-content">
+                <input type="radio" id="html_done9" name="Cold_permit9" value="HTML">
+                <label for="html_done9">Done</label>
+                <input type="radio" id="css_not_required9" name="Cold_permit9" value="CSS">
+                <label for="css_not_required9">Not Required</label>
+            </div>
+        </div>
+    
+        <br>
+      
+      <div class="flex-container">
+        <div class="left-content">
+            <p>Gas Test</p>
+            <input type="checkbox" id="Cold_permit_HC" name="Cold_permit" value="HC">
+            <label for="Cold_permit_HC">HC</label>
+            <input type="checkbox" id="Cold_permit_CO" name="Cold_permit" value="CO">
+            <label for="Cold_permit_CO">CO</label>
+            <input type="checkbox" id="Cold_permit_O2" name="Cold_permit" value="O2">
+            <label for="Cold_permit_O2">O2</label>
+            <input type="checkbox" id="Cold_permit_SO2" name="Cold_permit" value="SO2">
+            <label for="Cold_permit_SO2">SO2</label>
+            <input type="checkbox" id="Cold_permit_H2S" name="Cold_permit" value="H2S">
+            <label for="Cold_permit_H2S">H2S</label>
+            <input type="checkbox" id="Cold_permit_Other" name="Cold_permit" value="Other">
+            <label for="Cold_permit_Other">Other if Any</label>
+        </div>
+        
+        <div class="right-content">
+            <input type="radio" id="html" name="Cold_permit" value="HTML">
+            <label for="html">Done</label>
+            <input type="radio" id="css" name="Cold_permit" value="CSS">
+            <label for="css">Not Required</label>
+        </div>
+    </div>
+    <br>
+      
+    <div class="flex-container">
+      <div class="left-content">
+        <p>StandBy Personal Provided for Fire Watch from</p>
+        <input type="checkbox" id="Cold_permit_checked2" name="Cold_permit2" value="checked">
+        <label for="Cold_permit_checked2">Process</label>
+        <input type="checkbox" id="Cold_permit_covered2" name="Cold_permit2" value="covered">
+        <label for="Cold_permit_covered2">Maintenance</label>
+        <input type="checkbox" id="Cold_permit_covered2" name="Cold_permit2" value="covered">
+        <label for="Cold_permit_covered2">Fire & Safety</label>
+      </div>
+      
+      <div class="right-content">
+        <input type="radio" id="html_done2" name="Cold_permit2" value="HTML">
+        <label for="html_done2">Done</label>
+        <input type="radio" id="css_not_required2" name="Cold_permit2" value="CSS">
+        <label for="css_not_required2">Not Required</label>
+      </div>
+    </div> 
+    <br>
+    
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Proper Ventilation and Lighting Provided</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done" name="Cold_permit" value="HTML">
+            <label for="html_done">Done</label>
+            <input type="radio" id="css_not_required" name="Cold_permit" value="CSS">
+            <label for="css_not_required">Not Required</label>
+        </div>
+    </div>
+    <br>
+    
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Area Cordoned off (Minimum 15m) in case of Radiography</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done" name="Cold_permit" value="HTML">
+            <label for="html_done">Done</label>
+            <input type="radio" id="css_not_required" name="Cold_permit" value="CSS">
+            <label for="css_not_required">Not Required</label>
+        </div>
+    </div>
+    <br>
+    
+    
+    <div class="flex-container">
+        <div class="left-content">
+            <p>Radio Isotopes Kept Under Safe Containers</p>
+        </div>
+        <div class="right-content">
+            <input type="radio" id="html_done" name="Cold_permit" value="HTML">
+            <label for="html_done">Done</label>
+            <input type="radio" id="css_not_required" name="Cold_permit" value="CSS">
+            <label for="css_not_required">Not Required</label>
+        </div>
+    </div>
+    <br>
+    
+      <div class="flex-container">
+            <div class="left-content">
+                <p>Following Personal Protective Equipment (PPE) are used:</p>
+            </div>
+            <div class="right-content">
+                <input type="radio" id="html_done11" name="Cold_permit11" value="HTML">
+                <label for="html_done11">Done</label>
+                <input type="radio" id="css_not_required11" name="Cold_permit11" value="CSS">
+                <label for="css_not_required11">Not Required</label>
+            </div>
+        </div>
+    
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox" id="safety_helmet" name="ppe[]" value="Safety Helmet">
+                    <label for="safety_helmet">Safety Helmet</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="safety_shoes" name="ppe[]" value="Safety Shoes">
+                    <label for="safety_shoes">Safety Shoes</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="gloves" name="ppe[]" value="Gloves">
+                    <label for="gloves">Gloves</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="goggles" name="ppe[]" value="Goggles">
+                    <label for="goggles">Goggles</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="fresh_air_mask" name="ppe[]" value="Fresh Air Mask">
+                    <label for="fresh_air_mask">Fresh Air Mask</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="canister_mask" name="ppe[]" value="Canister Mask">
+                    <label for="canister_mask">Canister Mask</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="lifeline" name="ppe[]" value="Lifeline">
+                    <label for="lifeline">Lifeline</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="apron" name="ppe[]" value="Apron">
+                    <label for="apron">Apron</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="dust_respirator" name="ppe[]" value="Dust Respirator">
+                    <label for="dust_respirator">Dust Respirator</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="dosimeter" name="ppe[]" value="Dosimeter">
+                    <label for="dosimeter">Dosimeter</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="boiler_suit" name="ppe[]" value="Boiler Suit">
+                    <label for="boiler_suit">Boiler Suit</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="film_badges" name="ppe[]" value="Film Badges">
+                    <label for="film_badges">Film Badges</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="ear_plug" name="ppe[]" value="Ear Plug">
+                    <label for="ear_plug">Ear Plug</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="airline" name="ppe[]" value="Airline">
+                    <label for="airline">Airline</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="breathing_apparatus" name="ppe[]" value="Breathing Apparatus">
+                    <label for="breathing_apparatus">Breathing Apparatus</label>
+                </td>
+            </tr>
+    </table><br><br>
+    
+
+        <button type="button" onclick="showPage('page1')">Previous</button>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<script>
+    function showPage(pageId) {
+        var pages = document.querySelectorAll('.page');
+        pages.forEach(function(page) {
+            page.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+    }
+</script>
+</body>
+</html>
